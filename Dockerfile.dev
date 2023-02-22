@@ -1,0 +1,12 @@
+FROM node:alpine
+
+WORKDIR /usr/src/app
+
+COPY package.json ./
+
+RUN npm install
+
+COPY ./ ./ 
+# node_modules 지우고 빌드해도 됨
+
+CMD ["npm", "run", "start"]
