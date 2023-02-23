@@ -19,28 +19,3 @@ services:
       - ./:/usr/src/app
     command: ["npm", "run", "test"]
 
-# version: "2.4"
-# services:
-#   frontend:
-#     image: jungmin86/docker-react
-#     volumes:
-#       - /usr/src/app/node_modules
-#       - ./frontend:/app
-#     stdin_open: true 
-#     mem_limit: 128m
-#   nginx:
-#     restart: always
-#     ports:
-#       - "80:80"
-#     mem_limit: 128m
-#     links:
-#       - frontend
-#       - backend
-#   tests:
-#     build:
-#       context: .
-#       dockerfile: Dockerfile.dev
-#     volumes:
-#       - /usr/src/app/node_modules
-#       - ./:/usr/src/app
-#     command: ["npm", "run", "test"]
