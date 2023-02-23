@@ -10,7 +10,8 @@ RUN npm install
 COPY ./ ./ 
 # node_modules 지우고 빌드해도 됨
 
-CMD ["npm", "run", "build"]
+# CMD ["npm", "run", "build"]
+RUN npm run build
 
 
 FROM nginx
