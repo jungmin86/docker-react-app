@@ -14,7 +14,7 @@ before_install:
   - docker build -t jungmin86/docker-react-app -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true jungmin86/docker-react-app npm run test -- --coverage
+  - docker run -e CI=true jungmin86/docker-react npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
